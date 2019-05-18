@@ -1,18 +1,30 @@
 # Project Title
 
-One Paragraph of project description goes here
+Install AWX with prerequise.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Of course you must have git installed on your machine, if it's not the case the package will be installed by roles prerequis_install
+you must install:
 
 ```
-Give examples
+ Ansible
 ```
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
+
+This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change vars "{{docker_repo}}" in
+
+
+```
+/roles/prerequis_install/vars/main.yml
+
+```
+whith yout correct version
 
 ### Installing
 
@@ -20,69 +32,45 @@ A step by step series of examples that tell you how to get a development env run
 
 Say what the step will be
 
-```
-Give the example
-```
-
-And repeat
+Go in project folder and run command: 
 
 ```
-until finished
+ansible-playbook -i hosts master_playbook.yml 
 ```
+- The first role is installation of prerequise 
+- The second role is installation of AWX
 
-End with an example of getting some data out of the system or using it for a little demo
+## hosts file
 
-## Running the tests
+hosts file is only include localhost, please change or add your hosts in this file.
 
-Explain how to run the automated tests for this system
+### master_playbook
 
-### Break down into end to end tests
+This entry of playbook, it will list all roles and hosts
 
-Explain what these tests test and why
 
-```
-Give an example
-```
 
-### And coding style tests
+## Connect to AWX GUI
 
-Explain what these tests test and why
+go to http://127.0.0.1 or DNS name of your server 
+login: admin
+password: password
 
-```
-Give an example
-```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Rabah Bourahla** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+no licence
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
+https://github.com/ansible/awx/blob/devel/INSTALL.md
+https://github.com/ansible/awx
+
 
