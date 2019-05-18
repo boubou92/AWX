@@ -17,16 +17,17 @@ you must install:
 ```
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
 
-This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change variable
+This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change whith yout correct version
+the variable
 
 - "{{docker_repo}}"
 
+located in
 
 ```
 /roles/prerequis_install/vars/main.yml
 
 ```
-whith yout correct version
 
 ### Installing
 
