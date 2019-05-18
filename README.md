@@ -10,6 +10,20 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 You must have sudo user on the machine where AWX will be installed.
+If you have two server
+- Ansible controler
+- remote server
+
+Create key on your ansible controller :
+
+```
+sshkeygen -t rsa
+```
+
+```
+ssh-copy-id sudouser@remoteserver
+```
+
 
 Of course you must have git installed on your machine, if it's not the case the package will be installed by roles prerequis_install
 but you must install:
