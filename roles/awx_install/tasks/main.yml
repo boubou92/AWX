@@ -6,11 +6,11 @@
 
 - name: Clone AWX project from officiel github project
   git:
-    repo: https://github.com/ansible/awx.git
-    dest: ../../../AWX_install/awx_gitrepo
+    repo: "{{git_repo}}"
+    dest: "{{dest_repo}}"
 
 - name: Run AWX playbook install 
   shell:  ansible-playbook -i inventory install.yml
   args: 
-    chdir:  ../../../AWX_install/awx_gitrepo/installer/
+    chdir:  "{{AWX_installer}}"
   
