@@ -24,7 +24,10 @@ sshkeygen -t rsa
 ssh-copy-id sudouser@remoteserver
 ```
 
-
+Test your ssh connection by login to remote server:
+```
+ssh sudouser@remoteserver
+```
 Of course you must have git installed on your machine, if it's not the case the package will be installed by roles prerequis_install
 but you must install:
 
