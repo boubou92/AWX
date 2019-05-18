@@ -23,6 +23,14 @@
     - gnupg-agent
     - software-properties-common
 
+
+- apt_repository:
+    repo: ppa:ansible/ansible
+
+- name: Install ansible
+  apt:
+    name: ansible
+
 - name: Add key GPG
   apt_key:
     url: https://download.docker.com/linux/ubuntu/gpg
@@ -46,6 +54,7 @@
     - docker-ce
     - docker-ce-cli
     - containerd.io
+    - python
     - python-pip
     - docker-compose
     - build-essential
