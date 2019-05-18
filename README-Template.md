@@ -53,8 +53,8 @@ This entry of playbook, it will list all roles and hosts
 ## Connect to AWX GUI
 
 go to http://127.0.0.1 or DNS name of your server 
-login: admin
-password: password
+- login: admin
+- password: password
 
 
 
