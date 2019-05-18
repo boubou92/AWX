@@ -8,6 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 
 ### Prerequisites
+One machine or virtual machnie with
+
+A least of 20GB disk
+4GB ram
 
 You must have sudo user on the machine where AWX will be installed.
 If you have two server
