@@ -30,7 +30,7 @@
 
 - name: Add repository
   apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+    repo: "{{docker_repo}}"
     state: present
 
 - name: Update
@@ -60,7 +60,7 @@
     - docker
     - docker-compose
 
-- name: Running the container hello world for test
+- name: Running the container test hello world for test
   docker_container:
      image: hello-world
      name : hello-world_test

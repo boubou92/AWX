@@ -3,11 +3,7 @@
 - name: hosts
   hosts: local
   become: yes
-
-  tasks:
-  - name: echo 
-    shell: echo "Hello Rabah"
-  
+ 
   roles:
   - prerequis_install
   - awx_install
