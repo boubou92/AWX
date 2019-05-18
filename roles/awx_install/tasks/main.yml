@@ -6,7 +6,7 @@
 
 - name: Clone AWX project from officiel github project
   git:
-    repo: "{{git_repo}}"
+    repo: "{{git_repo_AWX}}"
     dest: "{{dest_repo}}"
 
 - name: Run AWX playbook install 
