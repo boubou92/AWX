@@ -8,14 +8,36 @@ These instructions will get you a copy of the project up and running on your loc
 
 
 ### Prerequisites
+One machine or virtual machnie with
 
-Of course you must have git installed on your machine, if it's not the case the package will be installed by roles prerequis_install
-you must install:
+A least of 20GB disk
+4GB ram
+
+You must have sudo user on the machine where AWX will be installed.
+If you have two server
+- Ansible controler
+- remote server
+
+Create key on your ansible controller :
 
 ```
- Ansible
+sshkeygen -t rsa
 ```
+
+```
+ssh-copy-id sudouser@remoteserver
+```
+
+Test your ssh connection by login to remote server:
+```
+ssh sudouser@remoteserver
+```
+I you are install AWX on localhost you need have already installed
+- git
+- ansible
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
+
+If you want install AWX on remote server, playbook will install all package, included git and ansible
 
 This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change whith yout correct version
 the variable
