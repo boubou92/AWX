@@ -1,0 +1,16 @@
+---
+
+- name: Include vars
+  include_vars: vars/main.yml
+
+
+- name: Clone AWX project from officiel github project
+  git:
+    repo: https://github.com/ansible/awx.git
+    dest: ../../../AWX_install/awx_gitrepo
+
+- name: Run AWX playbook install 
+  shell:  ansible-playbook -i inventory install.yml
+  args: 
+    chdir:  ../../../AWX_install/awx_gitrepo/installer/
+  
