@@ -9,6 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
+You must have sudo user on the machine where AWX will be installed.
+
 Of course you must have git installed on your machine, if it's not the case the package will be installed by roles prerequis_install
 you must install:
 
