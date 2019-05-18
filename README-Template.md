@@ -17,7 +17,9 @@ you must install:
 ```
 https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#latest-releases-via-apt-ubuntu
 
-This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change vars "{{docker_repo}}" in
+This project have been done for ubuntu 18.04 bionic, but you can use it for another version. please change variable
+
+- "{{docker_repo}}"
 
 
 ```
