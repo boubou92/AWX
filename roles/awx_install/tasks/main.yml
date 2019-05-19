@@ -3,6 +3,11 @@
 - name: Include vars
   include_vars: vars/main.yml
 
+- name: create dir to clone AWX repo
+  file:
+    path: "{{dest_repo}}"
+    state: directory
+    mode: '0775'
 
 - name: Clone AWX project from officiel github project
   git:

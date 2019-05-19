@@ -1,3 +1,4 @@
+
 git_repo_AWX: https://github.com/ansible/awx.git
-dest_repo: ../../../AWX_install/awx_gitrepo
+dest_repo: ../awx_repo/
 AWX_installer: "{{dest_repo}}/installer/"
